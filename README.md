@@ -50,12 +50,16 @@ cd ../..
 ```bash
 chmod +x run_experiment.sh
 ```
-### 实验一：单线程矩阵乘法测试 (Sequential Access Pattern) 
-该模式通过 Python 脚本生成标准的 $O(N^3)$ 矩阵乘法内存访问轨迹，用于测试纯线性、单线程访存下两种架构的表现 。
+### 实验一：单线程线性加法测试 (Sequential Access Pattern) 
+该模式通过 Python 脚本生成标准的线性加法内存访问轨迹，用于测试纯线性、单线程访存下两种架构的表现 。
 运行命令： 
 ```bash
-# 运行 N=128 或 256 规模的矩阵运算模拟
-./run_experiment.sh 128
+# 运行 低数据量线性访问比如 8 KB ($8192$ Bytes)
+./run_experiment.sh 8192
+```
+```bash
+# 运行 高数据量线性访问比如 8 MB ($8388608$ Bytes)
+./run_experiment.sh 8388608
 ```
 
 ### 实验二：高并发完全随机压测 (Random Stress Test) 

@@ -45,7 +45,7 @@ def main():
     if N == "stress":
         fig.suptitle('Performance Comparison (Random Stress Test)', fontsize=16, fontweight='bold')
     else:
-        fig.suptitle(f'Performance Comparison (Matrix Size: {N}x{N})', fontsize=16, fontweight='bold')
+        fig.suptitle(f'Performance Comparison (Linear Stream: {N})', fontsize=16, fontweight='bold')
 
     # 将数据打包，方便循环绘图
     metrics = [
